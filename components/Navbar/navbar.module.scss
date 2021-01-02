@@ -1,8 +1,25 @@
+$font-family: "open sans", "helveticaneue", Helvetica, Arial;  
+
 .navbar {
   nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
     ul {
+      display: flex;
+     
       li {
         list-style: none;
+        display: inline;
+        font-family: $font-family;
+        padding: 0px 13px;
+        font-size: 13px;
+        font-weight: 600;
+        a{
+            text-decoration: none;
+            color: #808080;
+        }
       }
     }
   }
