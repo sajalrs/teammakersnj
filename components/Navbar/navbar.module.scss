@@ -1,14 +1,18 @@
-$font-family: "open sans", "helveticaneue", Helvetica, Arial;  
+$font-family: "open sans", "helveticaneue", Helvetica, Arial;
 
 .navbar {
   nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 46px;
+    #logo-img {
+      height: 100px;
+      max-width: 300px;
+    }
+
     ul {
       display: flex;
-     
+
       li {
         list-style: none;
         display: inline;
@@ -16,9 +20,39 @@ $font-family: "open sans", "helveticaneue", Helvetica, Arial;
         padding: 0px 13px;
         font-size: 13px;
         font-weight: 600;
-        a{
-            text-decoration: none;
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .fixed {
+    nav {
+      height: 46px;
+      #logo-img {
+        max-height: 44px;
+      }
+
+      ul {
+        display: flex;
+
+        li {
+          a {
             color: #808080;
+          }
+        }
+      }
+    }
+  }
+
+  .not-fixed {
+    nav {
+      height: 88px;
+      ul {
+        li {
+          a {
+            color: #ffffff;
+          }
         }
       }
     }
