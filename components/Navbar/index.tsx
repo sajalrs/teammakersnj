@@ -13,6 +13,7 @@ const Navbar = ({ isFixed }: Props) => {
         className={isFixed ? navbarStyles["fixed"] : navbarStyles["not-fixed"]}
       >
         <nav>
+          <div className={navbarStyles["inner-container"]}>
           <Link href="/">
             <a>
               <img id={navbarStyles["logo-img"]} src="/TM-logo.png" />
@@ -60,6 +61,7 @@ const Navbar = ({ isFixed }: Props) => {
               </Link>
             </li>
           </ul>
+          </div>
         </nav>
       </div>
     </div>

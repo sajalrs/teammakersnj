@@ -14,7 +14,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
       const scrollY = window.scrollY;
       if(scrollY > 88 && !isFixed){
         setFixed(true);
-      } else if(scrollY < 88 && isFixed){
+      } else if(scrollY <= 90 && isFixed){
         setFixed(false);
       }
     }

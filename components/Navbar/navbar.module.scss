@@ -6,34 +6,43 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    #logo-img {
-      height: 100px;
-      max-width: 300px;
-    }
-
-    ul {
+    .inner-container{
       display: flex;
-
-      li {
-        list-style: none;
-        display: inline;
-        font-family:  "open sans", "helveticaneue", Helvetica, Arial;
-        padding: 0px 13px;
-        font-size: 13px;
-        font-weight: 600;
-        a {
-          text-decoration: none;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1130px;
+      padding: 0px 50px;
+      box-sizing: border-box;
+      #logo-img {
+        height: 100px;
+        max-width: 300px;
+      }
+  
+      ul {
+        display: flex;
+  
+        li {
+          list-style: none;
+          display: inline;
+          font-family:  "open sans", "helveticaneue", Helvetica, Arial;
+          padding: 0px 13px;
+          font-size: 13px;
+          font-weight: 600;
+          a {
+            text-decoration: none;
+          }
         }
       }
     }
   }
   .fixed {
     nav {
-      height: 46px;
+      height: 44px;
       background-color: white;
 
       #logo-img {
         max-height: 44px;
+        padding-right: 102.8px;
       }
 
       ul {
