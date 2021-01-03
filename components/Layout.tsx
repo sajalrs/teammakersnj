@@ -8,12 +8,13 @@ type Props = {
 };
 
 const Layout = ({ children, title = "This is the default title" }: Props) => {
-  const [isFixed, setFixed] = useState(true);
+  const [isFixed, setFixed] = useState(false);
   useEffect(() => {
     const toggleNavbarFix = () => {
-      if(window.pageYOffset > 88 && !isFixed){
+      const scrollY = window.scrollY;
+      if(scrollY > 88 && !isFixed){
         setFixed(true);
-      } else if(window.pageYOffset < 88 && isFixed){
+      } else if(scrollY < 88 && isFixed){
         setFixed(false);
       }
     }
