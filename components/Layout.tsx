@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode, useState, useEffect } from "react";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
 
@@ -9,6 +9,17 @@ type Props = {
 
 const Layout = ({ children, title = "This is the default title" }: Props) => {
   const [isFixed, setFixed] = useState(true);
+  useEffect(() => {
+    const toggleNavbarFix = () => {
+      if(window.pageYOffset > 88 && !isFixed){
+        setFixed(true);
+      } else if(window.pageYOffset < 88 && isFixed){
+        setFixed(false);
+      }
+    }
+    window.addEventListener("scroll", toggleNavbarFix);
+  }, [])
+  
   return (
   <div>
     <Head>
@@ -16,6 +27,13 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
+    <style jsx global>{`
+        body {
+          margin: 0px;
+          padding: 0px;
+          background-color: blue;
+        }
+      `}</style>
     <header>
       <Navbar isFixed={isFixed}/>
     </header>

@@ -21,6 +21,16 @@ const Navbar = ({ isFixed }: Props) => {
           <ul>
             <li>
               <Link href="/">
+                <a>Home</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a>About Us</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
                 <a>Programs {"&"} Services</a>
               </Link>
             </li>
