@@ -23,7 +23,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1130px;
   padding: 0px 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -40,13 +39,70 @@
   display: flex;
 }
 
+.navbar nav .inner-container ul .portal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar nav .inner-container ul .portal:hover .sub-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navbar nav .inner-container ul ul {
+  padding: 0px;
+}
+
+.navbar nav .inner-container ul .sub-menu {
+  display: none;
+  position: fixed;
+  background-color: white;
+}
+
+.navbar nav .inner-container ul .sub-menu li:hover {
+  background-color: #f4f4f4;
+}
+
+.navbar nav .inner-container ul .sub-menu li:hover a {
+  color: #333333;
+}
+
+.navbar nav .inner-container ul .sub-menu a {
+  color: #808080;
+  font-size: 12px;
+  font-weight: lighter;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 8px 15px;
+  padding-left: 2px;
+}
+
+.navbar nav .inner-container ul li:hover {
+  cursor: pointer;
+}
+
 .navbar nav .inner-container ul li {
   list-style: none;
-  display: inline;
   font-family: "open sans", "helveticaneue", Helvetica, Arial;
   padding: 0px 13px;
   font-size: 13px;
   font-weight: 600;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar nav .inner-container ul li a {
@@ -69,6 +125,15 @@
   display: flex;
 }
 
+.navbar .fixed nav ul .exposed:hover {
+  border: 2px solid #719430;
+  border-style: none none solid none;
+}
+
+.navbar .fixed nav ul li .sub-menu {
+  top: 46px;
+}
+
 .navbar .fixed nav ul li a {
   color: #808080;
 }
@@ -81,7 +146,20 @@
   height: 88px;
 }
 
-.navbar .not-fixed nav ul li a {
+.navbar .not-fixed nav ul .portal {
+  height: 88px;
+}
+
+.navbar .not-fixed nav ul .exposed:hover {
+  border: 2px solid white;
+  border-style: none none solid none;
+}
+
+.navbar .not-fixed nav ul li .sub-menu {
+  top: 90px;
+}
+
+.navbar .not-fixed nav ul a {
   color: #ffffff;
 }
 /*# sourceMappingURL=navbar.module.css.map */

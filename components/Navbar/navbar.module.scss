@@ -6,28 +6,68 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    .inner-container{
+    .inner-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 1130px;
       padding: 0px 50px;
       box-sizing: border-box;
       #logo-img {
         height: 100px;
         max-width: 300px;
       }
-  
+
       ul {
         display: flex;
-  
+        .portal{
+          display: flex;
+          align-items: center;
+        }
+
+        .portal:hover{
+          .sub-menu{
+            display: flex;
+            flex-direction: column;
+          }
+        }
+        ul {
+          padding: 0px;
+        }
+
+        .sub-menu {
+          display: none;
+          position: fixed;
+          background-color: white;
+          li:hover {
+            a {
+              color: #333333;
+            }
+
+            background-color: #f4f4f4;
+          }
+          a {
+            color: #808080;
+            font-size: 12px;
+            font-weight: lighter;
+            box-sizing: border-box;
+            padding: 8px 15px;
+            padding-left: 2px;
+          }
+        }
+        li:hover {
+          cursor: pointer;
+        }
+
         li {
           list-style: none;
-          display: inline;
-          font-family:  "open sans", "helveticaneue", Helvetica, Arial;
+          font-family: "open sans", "helveticaneue", Helvetica, Arial;
           padding: 0px 13px;
           font-size: 13px;
           font-weight: 600;
+          height: 44px;
+          display: flex;
+          align-items: center;
+
           a {
             text-decoration: none;
           }
@@ -47,8 +87,14 @@
 
       ul {
         display: flex;
-
+        .exposed:hover{
+          border: 2px solid #719430;
+          border-style: none none solid none;
+        }
         li {
+          .sub-menu {
+            top: 46px;
+          }
           a {
             color: #808080;
           }
@@ -62,10 +108,24 @@
     nav {
       height: 88px;
       ul {
-        li {
-          a {
-            color: #ffffff;
+        .portal{
+          height: 88px;
+       
+        }
+       
+          .exposed:hover{
+            border: 2px solid white;
+            border-style: none none solid none;
           }
+       
+        li {
+          .sub-menu {
+           
+            top: 90px;
+          }
+        }
+        a {
+          color: #ffffff;
         }
       }
     }
