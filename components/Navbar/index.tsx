@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import navbarStyles from "./navbar.module.css";
 import { useRouter } from "next/router";
 type Props = {
@@ -7,8 +7,8 @@ type Props = {
 };
 
 const Navbar = ({ isFixed, imageBehindNavbar }: Props) => {
+  const [isLarge, setIsLarge] = useState(false);
   const router = useRouter();
-
   return (
     <div
       className={
@@ -29,7 +29,7 @@ const Navbar = ({ isFixed, imageBehindNavbar }: Props) => {
                 <img id={navbarStyles["logo-img"]} src="/TM-logo.png" />
               </a>
 
-              <ul>
+              <ul className={isLarge? navbarStyles["horizontal-list"]: navbarStyles["vertical-list"]}>
                 <div className={navbarStyles["portal"]}>
                   <li
                     className={navbarStyles["exposed"]}
