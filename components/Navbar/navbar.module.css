@@ -112,6 +112,8 @@
 .navbar .fixed nav {
   height: 44px;
   background-color: white;
+  border: 1px solid gray;
+  border-style: solid none solid none;
 }
 
 .navbar .fixed nav #logo-img {
@@ -130,8 +132,13 @@
   border-style: none none solid none;
 }
 
+.navbar .fixed nav ul .exposed:hover .sub-menu {
+  border: 2px solid #719430;
+  border-style: solid none none none;
+}
+
 .navbar .fixed nav ul li .sub-menu {
-  top: 46px;
+  top: 44px;
 }
 
 .navbar .fixed nav ul li a {
@@ -156,7 +163,7 @@
 }
 
 .navbar .not-fixed nav ul li .sub-menu {
-  top: 90px;
+  top: 88px;
 }
 
 .navbar .not-fixed nav ul a {
@@ -172,9 +179,14 @@
   background-color: white;
 }
 
-.image-not-behind .not-fixed nav ul .exposed:hover {
+.image-not-behind .not-fixed nav ul .portal:hover {
   border: 2px solid #719430;
   border-style: none none solid none;
+}
+
+.image-not-behind .not-fixed nav ul .portal:hover .sub-menu {
+  border: 2px solid #719430;
+  border-style: solid none none none;
 }
 
 .image-not-behind .not-fixed nav ul li a {
