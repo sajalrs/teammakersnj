@@ -162,4 +162,22 @@
 .navbar .not-fixed nav ul a {
   color: #ffffff;
 }
+
+.image-not-behind nav {
+  border: 1px solid gray;
+  border-style: solid none solid none;
+}
+
+.image-not-behind .not-fixed nav {
+  background-color: white;
+}
+
+.image-not-behind .not-fixed nav ul .exposed:hover {
+  border: 2px solid #719430;
+  border-style: none none solid none;
+}
+
+.image-not-behind .not-fixed nav ul li a {
+  color: #808080;
+}
 /*# sourceMappingURL=navbar.module.css.map */

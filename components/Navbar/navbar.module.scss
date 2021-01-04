@@ -19,13 +19,13 @@
 
       ul {
         display: flex;
-        .portal{
+        .portal {
           display: flex;
           align-items: center;
         }
 
-        .portal:hover{
-          .sub-menu{
+        .portal:hover {
+          .sub-menu {
             display: flex;
             flex-direction: column;
           }
@@ -87,7 +87,7 @@
 
       ul {
         display: flex;
-        .exposed:hover{
+        .exposed:hover {
           border: 2px solid #719430;
           border-style: none none solid none;
         }
@@ -108,19 +108,17 @@
     nav {
       height: 88px;
       ul {
-        .portal{
+        .portal {
           height: 88px;
-       
         }
-       
-          .exposed:hover{
-            border: 2px solid white;
-            border-style: none none solid none;
-          }
-       
+
+        .exposed:hover {
+          border: 2px solid white;
+          border-style: none none solid none;
+        }
+
         li {
           .sub-menu {
-           
             top: 90px;
           }
         }
@@ -130,4 +128,32 @@
       }
     }
   }
+}
+
+.image-not-behind {
+
+  nav{
+    border: 1px solid gray;
+    border-style: solid none solid none;
+  }
+
+  .not-fixed{
+    nav{
+      background-color: white;
+      ul {
+        
+        .exposed:hover {
+          border: 2px solid #719430;
+          border-style: none none solid none;
+        }
+        li {
+          a {
+            color: #808080;
+          }
+        }
+      }
+    }
+   
+  }
+
 }

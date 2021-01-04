@@ -5,9 +5,10 @@ import Navbar from "../components/Navbar";
 type Props = {
   children?: ReactNode;
   title?: string;
+  imageBehindNavbar?: boolean;
 };
 
-const Layout = ({ children, title = "This is the default title" }: Props) => {
+const Layout = ({ children, title = "This is the default title", imageBehindNavbar = false }: Props) => {
   const [isFixed, setFixed] = useState(false);
   useEffect(() => {
     const toggleNavbarFix = () => {
@@ -35,7 +36,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
         }
       `}</style>
     <header>
-      <Navbar isFixed={isFixed}/>
+      <Navbar isFixed={isFixed} imageBehindNavbar={imageBehindNavbar}/>
     </header>
     {children}
     <footer>
