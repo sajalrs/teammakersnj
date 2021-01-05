@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import navbarStyles from "./navbar.module.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
 type Props = {
   isFixed: boolean;
   isTransparent: boolean;
 };
-
+//TODO: redirects from has-sub-menu li elements
 const Navbar = ({ isFixed, isTransparent }: Props) => {
   const [isActive, setActivity] = useState(false);
+  const router = useRouter();
   return (
     <div className={isTransparent ? `` : `${navbarStyles["opaque"]}`}>
       <div
@@ -44,12 +46,22 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                     : `${navbarStyles["menu"]} ${navbarStyles["is-inactive"]}`
                 }
               >
-                <li className={navbarStyles["menu-item"]}>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
                   <Link href="#">
                     <a>Home</a>
                   </Link>
                 </li>
-                <li className={navbarStyles["menu-item"]}>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
                   <Link href="#">
                     <a>About Us</a>
                   </Link>
@@ -61,49 +73,94 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                     <a>Programs {"&"} Services</a>
                   </Link>
                   <ul className={navbarStyles["sub-menu"]}>
-                    <li className={navbarStyles["sub-menu-item"]}>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
                       <Link href="#">
                         <a>After-School Programs</a>
                       </Link>
                     </li>
-                    <li className={navbarStyles["sub-menu-item"]}>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
                       <Link href="#">
                         <a> Birthday Parties</a>
                       </Link>
                     </li>
-                    <li className={navbarStyles["sub-menu-item"]}>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
                       <Link href="#">
                         <a>Camps</a>
                       </Link>
                     </li>
-                    <li className={navbarStyles["sub-menu-item"]}>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
                       <Link href="#">
                         <a>Workshops</a>
                       </Link>
                     </li>
-                    <li className={navbarStyles["sub-menu-item"]}>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
                       <Link href="#">
                         <a>Carnivals and Fun Days</a>
                       </Link>
                     </li>
-                    <li className={navbarStyles["sub-menu-item"]}>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
                       <Link href="#">
                         <a>Assemblies</a>
                       </Link>
                     </li>
                   </ul>
                 </li>
-                <li className={navbarStyles["menu-item"]}>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
                   <Link href="#">
                     <a>Partnerships</a>
                   </Link>
                 </li>
-                <li className={navbarStyles["menu-item"]}>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
                   <Link href="#">
                     <a>Photo Gallery</a>
                   </Link>
                 </li>
-                <li className={navbarStyles["menu-item"]}>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
                   <Link href="#">
                     <a>Testimonials</a>
                   </Link>
@@ -116,19 +173,34 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                   </Link>
 
                   <ul className={navbarStyles["sub-menu"]}>
-                    <li className={navbarStyles["sub-menu-item"]}>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
                       <Link href="#">
                         <a>Contact Info</a>
                       </Link>
                     </li>
-                    <li className={navbarStyles["sub-menu-item"]}>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
                       <Link href="#">
                         <a>Careers</a>
                       </Link>
                     </li>
                   </ul>
                 </li>
-                <li className={navbarStyles["menu-item"]}>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
                   <Link href="#">
                     <a>Register</a>
                   </Link>
