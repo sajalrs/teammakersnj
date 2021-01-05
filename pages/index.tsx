@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Layout from '../components/Layout'
 
 const IndexPage = () => (
-  <Layout title="Team Makers of North Jersey" imageBehindNavbar={true}>
+  <Layout title="Team Makers of North Jersey" isNavbarTransparent={false}>
     <h1>Hello Next.js 👋</h1>
     <p>
       <Link href="/about">

@@ -173,6 +173,36 @@
   }
 }
 
+.opaque{
+   .fixed, .not-fixed{
+    .navbar{
+        border: 1px solid gray;
+        border-style: solid none solid none;
+        background-color: white;
+        .logo-menu-container{
+            .hamburger-and-menu{
+                .menu{
+                    .menu-item{
+                        a{
+                            color: #808080;
+                        }
+                        &:hover{
+                            border: 2px solid #719430;
+                            border-style: none none solid none;
+                        }
+                    }
+                }
+          
+            }
+    
+        }
+    
+    }
+   }
+
+ 
+}
+
 @media screen and (max-width: 767px) {
   .fixed,
   .not-fixed {
