@@ -5,17 +5,17 @@ import Navbar from "../components/Navbar3";
 type Props = {
   children?: ReactNode;
   title?: string;
-  imageBehindNavbar?: boolean;
+  isNavbarTransparent?: boolean;
 };
 
-const Layout = ({ children, title = "This is the default title", imageBehindNavbar = false }: Props) => {
-  const [isFixed, setFixed] = useState(false);
+const Layout = ({ children, title = "This is the default title", isNavbarTransparent = false }: Props) => {
+  const [isNavbarFixed, setNavbarFix] = useState(false);
   useEffect(() => {
     const toggleNavbarFix = () => {
-      if(window.scrollY > 100 && !isFixed){
-        setFixed(true);
+      if(window.scrollY > 100 && !isNavbarFixed){
+        setNavbarFix(true);
       } else {
-        setFixed(false);
+        setNavbarFix(false);
       }
     }
     window.addEventListener("scroll", toggleNavbarFix);
@@ -42,7 +42,7 @@ const Layout = ({ children, title = "This is the default title", imageBehindNavb
         }
       `}</style>
     <header>
-      <Navbar/>
+      <Navbar isFixed={isNavbarFixed} isTransparent={isNavbarTransparent}/>
     </header>
     {children}
     <footer>
