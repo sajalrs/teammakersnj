@@ -1,6 +1,73 @@
-.navbar{
-    .logo-img{
-        height: 100px;
-        max-width: 300px;
+.navbar {
+  .logo-menu-container {
+    display: flex;
+
+    .logo-img {
+      height: 100px;
+      max-width: 300px;
     }
+
+    .hamburger-and-menu {
+      .menu {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+
+        .sub-menu {
+          list-style: none;
+          padding-left: 0px;
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .has-sub-menu {
+          &:hover {
+            > .sub-menu {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+
+      .hamburger {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar {
+    .logo-menu-container {
+      .hamburger-and-menu {
+        display: flex;
+        flex-direction: column;
+      
+        .is-inactive{
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .menu {
+          display: flex;
+          flex-direction: column;
+          list-style: outside;
+
+          .sub-menu {
+            list-style: outside;
+            padding-left: 40px;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        .hamburger {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
 }
