@@ -1,6 +1,6 @@
 import React, { ReactNode, useState, useEffect } from "react";
 import Head from "next/head";
-import Navbar from "../components/Navbar3";
+import Navbar from "./Navbar";
 
 type Props = {
   children?: ReactNode;

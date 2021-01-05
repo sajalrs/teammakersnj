@@ -1,187 +1,214 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import navbarStyles from "./navbar.module.css";
+import Link from "next/link";
 import { useRouter } from "next/router";
 type Props = {
   isFixed: boolean;
-  imageBehindNavbar: boolean;
+  isTransparent: boolean;
 };
-
-const Navbar = ({ isFixed, imageBehindNavbar }: Props) => {
-  const [isLarge, setIsLarge] = useState(false);
+//TODO: redirects from has-sub-menu li elements
+const Navbar = ({ isFixed, isTransparent }: Props) => {
+  const [isActive, setActivity] = useState(false);
   const router = useRouter();
   return (
-    <div
-      className={
-        imageBehindNavbar
-          ? ``
-          : `${navbarStyles["image-not-behind"]}`
-      }
-    >
-      <div className={navbarStyles["navbar"]}> 
-        <div
-          className={
-            isFixed ? navbarStyles["fixed"] : navbarStyles["not-fixed"]
-          }
-        >
-          <nav>
-            <div className={navbarStyles["inner-container"]}>
-              <a>
-                <img id={navbarStyles["logo-img"]} src="/TM-logo.png" />
-              </a>
+    <div className={isTransparent ? `` : `${navbarStyles["opaque"]}`}>
+      <div
+        className={isFixed ? navbarStyles["fixed"] : navbarStyles["not-fixed"]}
+      >
+        <nav className={navbarStyles["navbar"]}>
+          <div className={navbarStyles["logo-menu-container"]}>
+            <img
+              className={navbarStyles["logo-img"]}
+              src="/TM-logo.png"
+              alt="Team Makers of New Jersey Logo"
+            />
 
-              <ul className={isLarge? navbarStyles["horizontal-list"]: navbarStyles["vertical-list"]}>
-                <div className={navbarStyles["portal"]}>
-                  <li
-                    className={navbarStyles["exposed"]}
-                    onClick={() => {
-                      router.push("/");
-                    }}
-                  >
+            <div className={navbarStyles["hamburger-and-menu"]}>
+              {isActive ? (
+                <span
+                  className={`${navbarStyles["hamburger"]} fas fa-times-circle`}
+                  onClick={() => {
+                    setActivity(false);
+                  }}
+                />
+              ) : (
+                <span
+                  className={`${navbarStyles["hamburger"]} fas fa-list`}
+                  onClick={() => {
+                    setActivity(true);
+                  }}
+                />
+              )}
+              <ul
+                className={
+                  isActive
+                    ? navbarStyles["menu"]
+                    : `${navbarStyles["menu"]} ${navbarStyles["is-inactive"]}`
+                }
+              >
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
+                  <Link href="#">
                     <a>Home</a>
-                  </li>
-                </div>
-                <div className={navbarStyles["portal"]}>
-                  <li
-                    className={navbarStyles["exposed"]}
-                    onClick={() => {
-                      router.push("/");
-                    }}
-                  >
+                  </Link>
+                </li>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
+                  <Link href="#">
                     <a>About Us</a>
-                  </li>
-                </div>
-                <div className={navbarStyles["portal"]}>
-                  <li className={navbarStyles["exposed"]}>
-                    <ul>
-                      <li
-                        onClick={() => {
-                          router.push("/");
-                        }}
-                      >
-                        <a>Programs {"&"} Services</a>
-                      </li>
-                      <div className={navbarStyles["sub-menu"]}>
-                        <li
-                          onClick={() => {
-                            router.push("/");
-                          }}
-                        >
-                          <a>After-School Programs</a>
-                        </li>
-                        <li
-                          onClick={() => {
-                            router.push("/");
-                          }}
-                        >
-                          <a>Birthday Parties</a>
-                        </li>
-                        <li
-                          onClick={() => {
-                            router.push("/");
-                          }}
-                        >
-                          <a>Camps</a>
-                        </li>
-                        <li
-                          onClick={() => {
-                            router.push("/");
-                          }}
-                        >
-                          <a>Workshops</a>
-                        </li>
-                        <li
-                          onClick={() => {
-                            router.push("/");
-                          }}
-                        >
-                          <a>Carnivals {"&"} Fun Days</a>
-                        </li>
-                        <li
-                          onClick={() => {
-                            router.push("/");
-                          }}
-                        >
-                          <a>Assemblies</a>
-                        </li>
-                      </div>
-                    </ul>
-                  </li>
-                </div>
-                <div className={navbarStyles["portal"]}>
-                  <li
-                    className={navbarStyles["exposed"]}
-                    onClick={() => {
-                      router.push("/");
-                    }}
-                  >
+                  </Link>
+                </li>
+                <li
+                  className={`${navbarStyles["menu-item"]} ${navbarStyles["has-sub-menu"]}`}
+                >
+                  <Link href="#">
+                    <a>Programs {"&"} Services</a>
+                  </Link>
+                  <ul className={navbarStyles["sub-menu"]}>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
+                      <Link href="#">
+                        <a>After-School Programs</a>
+                      </Link>
+                    </li>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
+                      <Link href="#">
+                        <a> Birthday Parties</a>
+                      </Link>
+                    </li>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
+                      <Link href="#">
+                        <a>Camps</a>
+                      </Link>
+                    </li>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
+                      <Link href="#">
+                        <a>Workshops</a>
+                      </Link>
+                    </li>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
+                      <Link href="#">
+                        <a>Carnivals and Fun Days</a>
+                      </Link>
+                    </li>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
+                      <Link href="#">
+                        <a>Assemblies</a>
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
+                  <Link href="#">
                     <a>Partnerships</a>
-                  </li>
-                </div>
-                <div className={navbarStyles["portal"]}>
-                  <li
-                    className={navbarStyles["exposed"]}
-                    onClick={() => {
-                      router.push("/");
-                    }}
-                  >
+                  </Link>
+                </li>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
+                  <Link href="#">
                     <a>Photo Gallery</a>
-                  </li>
-                </div>
-                <div className={navbarStyles["portal"]}>
-                  <li
-                    className={navbarStyles["exposed"]}
-                    onClick={() => {
-                      router.push("/");
-                    }}
-                  >
+                  </Link>
+                </li>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
+                  <Link href="#">
                     <a>Testimonials</a>
-                  </li>
-                </div>
-                <div className={navbarStyles["portal"]}>
-                  <li className={navbarStyles["exposed"]}>
-                    <ul>
-                      <li
-                        onClick={() => {
-                          router.push("/");
-                        }}
-                      >
-                        <a>Contact Us</a>
-                      </li>
-                      <div className={navbarStyles["sub-menu"]}>
-                        <li
-                          onClick={() => {
-                            router.push("/");
-                          }}
-                        >
-                          <a>Contact Info</a>
-                        </li>
+                  </Link>
+                </li>
+                <li
+                  className={`${navbarStyles["menu-item"]} ${navbarStyles["has-sub-menu"]}`}
+                >
+                  <Link href="#">
+                    <a>Contact Us</a>
+                  </Link>
 
-                        <li
-                          onClick={() => {
-                            router.push("/");
-                          }}
-                        >
-                          <a>Careers</a>
-                        </li>
-                      </div>
-                    </ul>
-                  </li>
-                </div>
-
-                <div className={navbarStyles["portal"]}>
-                  <li
-                    className={navbarStyles["exposed"]}
-                    onClick={() => {
-                      router.push("/");
-                    }}
-                  >
+                  <ul className={navbarStyles["sub-menu"]}>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
+                      <Link href="#">
+                        <a>Contact Info</a>
+                      </Link>
+                    </li>
+                    <li
+                      className={navbarStyles["sub-menu-item"]}
+                      onClick={() => {
+                        router.push("#");
+                      }}
+                    >
+                      <Link href="#">
+                        <a>Careers</a>
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  className={navbarStyles["menu-item"]}
+                  onClick={() => {
+                    router.push("#");
+                  }}
+                >
+                  <Link href="#">
                     <a>Register</a>
-                  </li>
-                </div>
+                  </Link>
+                </li>
               </ul>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </div>
     </div>
   );
