@@ -134,15 +134,11 @@
     background-color: transparent;
     height: 88px;
     .logo-menu-container {
-      height: 100%;
       .logo-img {
         max-height: 88px;
       }
       .hamburger-and-menu {
-        height: 100%;
         .menu {
-          height: 100%;
-
           .menu-item {
             height: 88px;
             .sub-menu {
@@ -211,19 +207,24 @@
 }
 
 @media screen and (max-width: 767px) {
+ 
+
   .fixed,
   .not-fixed {
     .navbar {
       height: 88px;
-
+      border: none;
+      
       // justify-content: center;
       .logo-menu-container {
+        height: min-content;
         background-color: white;
         .logo-img {
           max-height: 88px;
         }
 
         .hamburger-and-menu {
+          height: min-content;
           display: flex;
           flex-direction: column;
           width: 100%;
@@ -240,23 +241,74 @@
           .menu {
             display: flex;
             flex-direction: column;
-            list-style: outside;
+            list-style: circle;
             position: fixed;
-            top: 88px;
+            top: 72px;
+            left: 0px;
             width: 100%;
+            padding: 0px;
             .menu-item {
-              height: max-content;
-            }
-
-            .sub-menu {
-              list-style: outside;
-              padding-left: 40px;
-              opacity: 1;
-              visibility: visible;
-              position: relative;
-              top: 0px;
+              
+              align-items: flex-start;
+              height: min-content;
+              padding: 0px;
+              background-color: white;
+              &:hover {
+                border: 1px solid gray;
+                border-style: none none none none;
+                > .sub-menu {
+                  border: 1px solid gray;
+                  border-style: none none none none;
+                }
+              }
               a {
+                border: 1px solid gray;
+                border-style: solid none none;
+                  font-weight: normal;
+                color: #808080;
+                height: min-content;
                 padding: 13px 28px;
+                width: 100vw;
+                &:hover{
+                    color: white;
+                    background-color:#719430;
+                }
+              }
+              .sub-menu {
+                // list-style: outside;
+                // padding-left: 40px;
+                opacity: 1;
+                visibility: visible;
+                position: relative;
+                top: 0px;
+                a {
+                  color: #808080;
+                  font-size: 13px;
+                  padding: 13px 28px;
+                }
+                .sub-menu-item {
+                  padding: 0px;
+                  width: 100vw;
+                  height: min-content;
+                  a {
+                    &:hover{
+                        color: white;
+                        background-color:#719430;
+                    }
+                    font-size: 13px;
+                    padding: 13px 28px;
+                  }
+                }
+              }
+            }
+            .has-sub-menu {
+              height: max-content;
+              .sub-menu {
+                .sub-menu-item {
+                  a {
+                    padding-left: 50px;
+                  }
+                }
               }
             }
           }

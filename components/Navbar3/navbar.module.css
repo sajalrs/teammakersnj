@@ -171,20 +171,8 @@
   height: 88px;
 }
 
-.not-fixed .navbar .logo-menu-container {
-  height: 100%;
-}
-
 .not-fixed .navbar .logo-menu-container .logo-img {
   max-height: 88px;
-}
-
-.not-fixed .navbar .logo-menu-container .hamburger-and-menu {
-  height: 100%;
-}
-
-.not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu {
-  height: 100%;
 }
 
 .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item {
@@ -252,9 +240,13 @@
   .fixed .navbar,
   .not-fixed .navbar {
     height: 88px;
+    border: none;
   }
   .fixed .navbar .logo-menu-container,
   .not-fixed .navbar .logo-menu-container {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
     background-color: white;
   }
   .fixed .navbar .logo-menu-container .logo-img,
@@ -263,6 +255,9 @@
   }
   .fixed .navbar .logo-menu-container .hamburger-and-menu,
   .not-fixed .navbar .logo-menu-container .hamburger-and-menu {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -292,29 +287,91 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    list-style: outside;
+    list-style: circle;
     position: fixed;
-    top: 88px;
+    top: 72px;
+    left: 0px;
     width: 100%;
+    padding: 0px;
   }
   .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item,
   .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding: 0px;
+    background-color: white;
   }
-  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .sub-menu,
-  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .sub-menu {
-    list-style: outside;
-    padding-left: 40px;
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover {
+    border: 1px solid gray;
+    border-style: none none none none;
+  }
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover > .sub-menu,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover > .sub-menu {
+    border: 1px solid gray;
+    border-style: none none none none;
+  }
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a {
+    border: 1px solid gray;
+    border-style: solid none none;
+    font-weight: normal;
+    color: #808080;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+    padding: 13px 28px;
+    width: 100vw;
+  }
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a:hover,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a:hover {
+    color: white;
+    background-color: #719430;
+  }
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item .sub-menu,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item .sub-menu {
     opacity: 1;
     visibility: visible;
     position: relative;
     top: 0px;
   }
-  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .sub-menu a,
-  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .sub-menu a {
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item .sub-menu a,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item .sub-menu a {
+    color: #808080;
+    font-size: 13px;
     padding: 13px 28px;
+  }
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item .sub-menu .sub-menu-item,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item .sub-menu .sub-menu-item {
+    padding: 0px;
+    width: 100vw;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item .sub-menu .sub-menu-item a,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item .sub-menu .sub-menu-item a {
+    font-size: 13px;
+    padding: 13px 28px;
+  }
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item .sub-menu .sub-menu-item a:hover,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item .sub-menu .sub-menu-item a:hover {
+    color: white;
+    background-color: #719430;
+  }
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .has-sub-menu,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .has-sub-menu {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .has-sub-menu .sub-menu .sub-menu-item a,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .has-sub-menu .sub-menu .sub-menu-item a {
+    padding-left: 50px;
   }
   .fixed .navbar .logo-menu-container .hamburger-and-menu .hamburger,
   .not-fixed .navbar .logo-menu-container .hamburger-and-menu .hamburger {
