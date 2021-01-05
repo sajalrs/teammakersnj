@@ -105,6 +105,7 @@
 }
 
 .navbar .logo-menu-container .hamburger-and-menu .menu .sub-menu .sub-menu-item:hover {
+  cursor: pointer;
   background-color: #f4f4f4;
 }
 
@@ -150,9 +151,19 @@
   top: 44px;
 }
 
+.fixed .navbar .menu-item a {
+  color: #808080;
+}
+
 .fixed .navbar .menu-item:hover {
   border: 2px solid #719430;
   border-style: none none solid none;
+  cursor: pointer;
+}
+
+.fixed .navbar .menu-item:hover > .sub-menu {
+  border: 2px solid #719430;
+  border-style: solid none none none;
 }
 
 .not-fixed .navbar {
@@ -162,6 +173,10 @@
 
 .not-fixed .navbar .logo-menu-container {
   height: 100%;
+}
+
+.not-fixed .navbar .logo-menu-container .logo-img {
+  max-height: 88px;
 }
 
 .not-fixed .navbar .logo-menu-container .hamburger-and-menu {
@@ -192,28 +207,45 @@
   text-decoration: none;
 }
 
-.not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover {
+.not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a {
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+}
+
+.not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a:hover {
+  cursor: pointer;
   border: 2px solid white;
   border-style: none none solid none;
 }
 
-.not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a {
-  color: #ffffff;
-}
-
-.opaque .fixed .navbar, .opaque .not-fixed .navbar {
+.opaque .fixed .navbar,
+.opaque .not-fixed .navbar {
   border: 1px solid gray;
   border-style: solid none solid none;
   background-color: white;
 }
 
-.opaque .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a, .opaque .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a {
+.opaque .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a,
+.opaque .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item a {
   color: #808080;
 }
 
-.opaque .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover, .opaque .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover {
+.opaque .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover,
+.opaque .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover {
   border: 2px solid #719430;
   border-style: none none solid none;
+}
+
+.opaque .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover > .sub-menu,
+.opaque .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item:hover > .sub-menu {
+  border: 2px solid #719430;
+  border-style: solid none none none;
 }
 
 @media screen and (max-width: 767px) {
