@@ -1,16 +1,26 @@
 .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .logo-menu-container {
     display: flex;
-
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 960px;
     .logo-img {
       height: 100px;
       max-width: 300px;
     }
 
     .hamburger-and-menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       .menu {
         display: flex;
         flex-direction: row;
+        // align-items: center;
         list-style: none;
 
         .sub-menu {
@@ -40,11 +50,22 @@
 
 @media screen and (max-width: 767px) {
   .navbar {
+    height: 88px;
+    // justify-content: center;
     .logo-menu-container {
+        .logo-img{
+            max-height: 88px;
+        }
+  
       .hamburger-and-menu {
         display: flex;
         flex-direction: column;
-      
+        width: 100%;
+        .hamburger{
+            position: fixed;
+            right: 23px;
+            font-size: 2rem
+        }
         .is-inactive{
             opacity: 0;
             visibility: hidden;
@@ -54,7 +75,9 @@
           display: flex;
           flex-direction: column;
           list-style: outside;
-
+          position: fixed;
+          top: 88px;
+          width: 100%;
           .sub-menu {
             list-style: outside;
             padding-left: 40px;
