@@ -197,6 +197,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                 </li>
                 <li
                   className={navbarStyles["menu-item"]}
+                  id={navbarStyles["last-menu-item"]}
                   onClick={() => {
                     router.push("#");
                   }}

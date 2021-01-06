@@ -293,6 +293,13 @@
     left: 0px;
     width: 100%;
     padding: 0px;
+    height: 100vh;
+    background-color: white;
+  }
+  .fixed .navbar .logo-menu-container .hamburger-and-menu .menu #last-menu-item,
+  .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu #last-menu-item {
+    border: 1px solid gray;
+    border-style: none none solid none;
   }
   .fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item,
   .not-fixed .navbar .logo-menu-container .hamburger-and-menu .menu .menu-item {
