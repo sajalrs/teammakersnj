@@ -1,16 +1,13 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import Link from "next/link";
+import Layout from "../components/Layout";
+import ImageCard from "../components/ImageCard";
 
 const IndexPage = () => (
   <Layout title="Team Makers of North Jersey" isNavbarTransparent={true}>
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-      <div style={{height: "1000px"}}></div>
-    </p>
+      <ImageCard/>
+      <div style={{ height: "1000px" }}></div>
+    
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

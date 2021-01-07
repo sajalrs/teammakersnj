@@ -1,0 +1,9 @@
+.button {
+  background-color: transparent;
+  border: 4px solid white;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+/*# sourceMappingURL=transparentButton.module.css.map */

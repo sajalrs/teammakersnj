@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACN,gBAAgB,EAAE,WAAW;EAC7B,MAAM,EAAE,eAAe;CAIxB;;AAND,AAGE,OAHK,AAGJ,MAAM,CAAA;EACL,OAAO,EAAE,IAAI;CAChB",
+    "sources": [
+        "transparentButton.module.scss"
+    ],
+    "names": [],
+    "file": "transparentButton.module.css"
+}
