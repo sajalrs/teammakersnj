@@ -75,7 +75,7 @@ const Footer = () => {
 
           <li className={footerStyles["navigation-list-item"]}>
             <Link href="#">
-              <a>Contact US</a>
+              <a>Contact Us</a>
             </Link>
             {"|"}
           </li>
@@ -89,16 +89,16 @@ const Footer = () => {
 
         <ul className={footerStyles["social-icons"]}>
           <li>
-            <span className="fab fa-facebook-f"></span>
+          <Link href="#"><a><span className="fab fa-facebook-f" id={footerStyles["facebook"]}></span></a></Link>
           </li>
           <li>
-            <span className="fab fa-google-plus-g"></span>
+          <Link href="#"><a><span className="fab fa-google-plus-g" id={footerStyles["google-plus"]}></span></a></Link>
           </li>
           <li>
-            <span className="fab fa-pinterest-p"></span>
+          <Link href="#"><a><span className="fab fa-pinterest-p" id={footerStyles["pinterest"]}></span></a></Link>
           </li>
           <li>
-            <span className="fab fa-instagram"></span>
+          <Link href="#"><a><span className="fab fa-instagram" id={footerStyles["instagram"]}></span></a></Link>
           </li>
         </ul>
       </div>
