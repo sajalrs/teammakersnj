@@ -1,4 +1,3 @@
-import { totalmem } from "os";
 import React from "react";
 import GreenButton from "../Buttons/Green";
 import TransparentButton from "../Buttons/Transparent";
@@ -31,13 +30,17 @@ const ImageCard = ({textPosition, imgSrc, title, subtitle}: Props) => {
         id={imageCardStyles["image-card-image"]}
         src={imgSrc}
       />
-      <div className={`${imageCardStyles["image-card-text"]} ${imageCardStyles[textPosition]} `}>
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
+      <div className={`${imageCardStyles["text-screen"]}`}>
+          
+      <div className={`${imageCardStyles["image-card-text"]} ${imageCardStyles[textPosition]}`}>
+        <h1 className={imageCardStyles["title"]}>{title}</h1>
+        <h2 className={imageCardStyles["subtitle"]}>{subtitle}</h2>
         <div className={imageCardStyles["buttons"]}>
           <GreenButton buttonText="LEARN MORE" onClick={() => {}} />
           <TransparentButton buttonText="CONTACT US" onClick={() => {}} />
         </div>
+
+      </div>
       </div>
     </div>
   );

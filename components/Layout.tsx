@@ -15,14 +15,16 @@ const Layout = ({
 }: Props) => {
   const [isNavbarFixed, setNavbarFix] = useState(false);
   useEffect(() => {
-    const toggleNavbarFix = () => {
-      if (window.scrollY > 100 && !isNavbarFixed) {
-        setNavbarFix(true);
-      } else {
-        setNavbarFix(false);
-      }
-    };
-    window.addEventListener("scroll", toggleNavbarFix);
+      const toggleNavbarFix = () => {
+        if (window.scrollY > 100 && !isNavbarFixed) {
+          setNavbarFix(true);
+        } else {
+          setNavbarFix(false);
+        }
+      };
+  
+      window.addEventListener("scroll", toggleNavbarFix);
+
   }, []);
 
   return (
@@ -42,6 +44,7 @@ const Layout = ({
         body {
           margin: 0px;
           padding: 0px;
+          overflow-x: hidden;
           background-color: blue;
         }
       `}</style>

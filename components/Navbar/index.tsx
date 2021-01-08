@@ -49,7 +49,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                 <li
                   className={navbarStyles["menu-item"]}
                   onClick={() => {
-                    router.push("#");
+                    router.push("/");
                   }}
                 >
                   <Link href="#">
@@ -59,7 +59,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                 <li
                   className={navbarStyles["menu-item"]}
                   onClick={() => {
-                    router.push("#");
+                    router.push("/");
                   }}
                 >
                   <Link href="#">
@@ -76,7 +76,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                     <li
                       className={navbarStyles["sub-menu-item"]}
                       onClick={() => {
-                        router.push("#");
+                        router.push("/");
                       }}
                     >
                       <Link href="#">
@@ -86,7 +86,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                     <li
                       className={navbarStyles["sub-menu-item"]}
                       onClick={() => {
-                        router.push("#");
+                        router.push("/");
                       }}
                     >
                       <Link href="#">
@@ -96,7 +96,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                     <li
                       className={navbarStyles["sub-menu-item"]}
                       onClick={() => {
-                        router.push("#");
+                        router.push("/");
                       }}
                     >
                       <Link href="#">
@@ -106,7 +106,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                     <li
                       className={navbarStyles["sub-menu-item"]}
                       onClick={() => {
-                        router.push("#");
+                        router.push("/");
                       }}
                     >
                       <Link href="#">
@@ -116,7 +116,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                     <li
                       className={navbarStyles["sub-menu-item"]}
                       onClick={() => {
-                        router.push("#");
+                        router.push("/");
                       }}
                     >
                       <Link href="#">
@@ -126,7 +126,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                     <li
                       className={navbarStyles["sub-menu-item"]}
                       onClick={() => {
-                        router.push("#");
+                        router.push("/");
                       }}
                     >
                       <Link href="#">
@@ -138,7 +138,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                 <li
                   className={navbarStyles["menu-item"]}
                   onClick={() => {
-                    router.push("#");
+                    router.push("/");
                   }}
                 >
                   <Link href="#">
@@ -148,7 +148,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                 <li
                   className={navbarStyles["menu-item"]}
                   onClick={() => {
-                    router.push("#");
+                    router.push("/");
                   }}
                 >
                   <Link href="#">
@@ -158,7 +158,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                 <li
                   className={navbarStyles["menu-item"]}
                   onClick={() => {
-                    router.push("#");
+                    router.push("/");
                   }}
                 >
                   <Link href="#">
@@ -176,7 +176,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                     <li
                       className={navbarStyles["sub-menu-item"]}
                       onClick={() => {
-                        router.push("#");
+                        router.push("/");
                       }}
                     >
                       <Link href="#">
@@ -186,7 +186,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                     <li
                       className={navbarStyles["sub-menu-item"]}
                       onClick={() => {
-                        router.push("#");
+                        router.push("/");
                       }}
                     >
                       <Link href="#">
@@ -199,7 +199,7 @@ const Navbar = ({ isFixed, isTransparent }: Props) => {
                   className={navbarStyles["menu-item"]}
                   id={navbarStyles["last-menu-item"]}
                   onClick={() => {
-                    router.push("#");
+                    router.push("/");
                   }}
                 >
                   <Link href="#">
