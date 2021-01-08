@@ -1,0 +1,16 @@
+.events{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    .event-cards{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        height: 100vh;
+        max-height: 335px;
+        max-width: 1030px;
+    }
+}

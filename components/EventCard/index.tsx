@@ -12,6 +12,7 @@ const EventCard = ({ icon, title, description }: Props) => {
     <div className={eventCardStyles["event-card"]}>
       <div className={eventCardStyles["title-and-icon"]}>
         <span className={`${icon} ${eventCardStyles["icon"]}`}></span>
+        
         <h1 className={eventCardStyles["title"]}>{title}</h1>
       </div>
       <p className={eventCardStyles["description"]}>{description}</p>

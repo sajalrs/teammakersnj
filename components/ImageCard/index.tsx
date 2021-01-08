@@ -36,8 +36,8 @@ const ImageCard = ({textPosition, imgSrc, title, subtitle}: Props) => {
         <h1 className={imageCardStyles["title"]}>{title}</h1>
         <h2 className={imageCardStyles["subtitle"]}>{subtitle}</h2>
         <div className={imageCardStyles["buttons"]}>
-          <GreenButton buttonText="LEARN MORE" onClick={() => {}} />
-          <TransparentButton buttonText="CONTACT US" onClick={() => {}} />
+          <TransparentButton buttonText="LEARN MORE" onClick={() => {}} />
+          <GreenButton buttonText="CONTACT US" onClick={() => {}} />
         </div>
 
       </div>
