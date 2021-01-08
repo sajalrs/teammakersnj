@@ -1,0 +1,58 @@
+.event-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  max-height: 210px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 302px;
+}
+
+.event-card .title-and-icon {
+  color: #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px 0px 0px;
+  margin: 0px 0px 16px;
+}
+
+.event-card .title-and-icon .title {
+  font-family: "Droid Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 2px;
+  font-size: 16.25px;
+}
+
+.event-card .title-and-icon .icon {
+  font-size: 16.25px;
+  margin: 2px;
+}
+
+.event-card .description {
+  color: #666666;
+  font-family: "open sans", "helveticaneue", Helvetica, Arial;
+  font-size: 13px;
+  margin: 11px 0px;
+}
+
+.event-card .learn-more {
+  font-size: 13px;
+  color: #719430;
+  font-family: "open sans", "helveticaneue", Helvetica, Arial;
+}
+
+.event-card .learn-more:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=eventCard.module.css.map */
